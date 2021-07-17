@@ -1,4 +1,4 @@
-Project that simulates a financial transactions system (The code it's self is wrote in portuguese, I'm working in the translation)
+Python project that simulates a financial transactions system (The code it's self is wrote in portuguese, I'm working in the translation)
 
     it can create new accounts 
         make deposits, withdraws, add credit limit, transference between accounts, consult account resources...
