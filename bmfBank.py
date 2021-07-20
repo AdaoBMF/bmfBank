@@ -4,30 +4,22 @@ from random import randint
 
 class ContaCorrente():
     """
-    Cria um objeto ContaCorrente para gerenciar as movimentacoes financeiras dos clientes
-
-    Parametros:
-    nome (str): Nome do cliente
-    cpf (str): CPF do cliente - deve ser inserido no formato: '000.000.000-00'
-    ag (str): Codigo da agencia responsavel pela conta do cliente 
-    cc (str): Codigo de identificacao da CC do cliente
-
-    Atributos: 
-    nome (str): Nome do cliente
-    cpf (str): CPF do cliente - deve ser inserido no formato: '000.000.000-00'
-    _saldo (int): Saldo atual da conta do cliente
-    _limite_max (int): Limite maximo autorizado para o cliente
-    _limite (int): Limite atual disponivel na conta do cliente
-    ag (str): Codigo da agencia responsavel pela CC do cliente
-    cc (str): Codigo de identificacao da CC do cliente
-    _historico (list): Lista com os registros de historico de transacoes da CC
+    Criates an object: Account 
+    that handles clients currency movment 
+    
+    Parameters:
+    name (str): Client's name
+    cpf (str): Client's CPF(Brazilian social number equiv) - shape: '123.123.123-12'
+    ag (str): Bank Branch's id number - shape: '1234'
+    cc (str): account's id number(automatically generated) - shape: '123456789'
     """
     
     @staticmethod
     def _data_hora():
         """
-        Gera um registro com data e hora
+        Returns a date-hour log 
         
+        No prameters needed
         """
         fuso_Br = pytz.timezone('Brazil/East')
         d_h = datetime.now(fuso_Br)
@@ -35,13 +27,13 @@ class ContaCorrente():
 
     def __init__(self, nome, cpf, ag, cc):
         """
-        Cria um objeto ContaCorrente para gerenciar as movimentacoes financeiras dos clientes
+        Initiate the object: Account
 
-        Parametros:
-        nome (str): Nome do cliente
-        cpf (str): CPF do cliente - deve ser inserido no formato: '000.000.000-00'
-        ag (str): Codigo da agencia responsavel pela conta do cliente 
-        cc (str): Codigo de identificacao da CC do cliente
+        Parameters:
+        name (str): Client's name
+        cpf (str): Client's CPF(Brazilian social number equiv) - shape: '123.123.123-12'
+        ag (str): Bank Branch's id number - shape: '1234'
+        cc (str): account's id number(automatically generated) - shape: '123456789 
         """
         self.nome = nome
         self.cpf = cpf
